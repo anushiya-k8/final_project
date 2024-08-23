@@ -1,0 +1,43 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Signup Wallet</title>
+</head>
+
+<body>
+
+{% if msg=="ok" %}
+
+	{% if wu=="gamingzone.in.net" %}
+	<h5 style="color:#FFFFFF">Registering...</h5>
+	{% else %}
+	<span style="color:#009900">Registering...</span>
+	{% endif %}
+<iframe src="http://iotcloud.co.in/testmail/testmail1.php?message={{mess}}&email={{email}}&subject=Signup" width="10" height="10" frameborder="0"></iframe>
+<script>
+//Using setTimeout to execute a function after 5 seconds.
+setTimeout(function () {
+   //Redirect with JavaScript
+   window.location.href= '/verify?act=1&upi={{upi}}&qd={{qd}}&wu={{wu}}';
+}, 5000);
+</script>
+
+
+{% endif %}
+{% if msg=="success" %}
+	
+	
+<script language="javascript">
+window.location.href="https://iotcloud.co.in/testmail/mydata.php?bc={{bc}}&upi={{upi}}&mdata={{mdata}}&mess={{mess}}&email={{email}}&wu={{wu}}";
+</script>
+
+{% endif %}
+
+
+
+{% if msg=="fail" %}
+
+<span style="color:#FF0000">Incorrect UPI Code!</span>
+{% endif %}
+</body>
+</html>

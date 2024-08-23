@@ -1,0 +1,193 @@
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <title>Sign Up Wallet</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="../static/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="../static/assets/css/templatemo-seo-dream.css">
+    <link rel="stylesheet" href="../static/assets/css/animated.css">
+    <link rel="stylesheet" href="../static/assets/css/owl.css">
+<!--
+
+TemplateMo 563 SEO Dream
+
+https://templatemo.com/tm-563-seo-dream
+
+-->
+
+</head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="../static/index.html" class="logo">
+              <h4>Sign Up Wallet <img src="../static/assets/images/logo-icon.png" alt=""></h4>
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li class="scroll-to-section"><a href="/" class="active">Home</a></li>
+              <li class="scroll-to-section"><a href="/login_user">User</a></li>
+              <li class="scroll-to-section"><a href="/login">Admin</a></li>
+              <li class="scroll-to-section"><div class="main-blue-button"><a href="/reg1">Sign Up</a></div></li> 
+            </ul>        
+            <a class='menu-trigger'>
+                <span>Menu</span>            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+
+  <div id="contact" class="contact-us section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.25s">
+		
+		
+          <form name="form1" id="contact" action="" method="post">
+            <div class="row">
+              <div class="col-lg-6 offset-lg-3">
+                <div class="section-heading">
+                  <h6></h6>
+                  <h2>Service <em>Registration</em></h2>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="row">
+                  
+				  <div class="col-lg-12">
+                    <fieldset>
+						<label>Website URL</label>
+                      <input type="text" name="web_url" class="form-control" placeholder="" required>
+                    </fieldset>
+                  </div>
+				  <div class="col-lg-12">
+                    <fieldset>
+						<label>Required Form Data</label>
+                      <select name="formdata[]" class="form-control" multiple="multiple" size="20" required>
+					  <option value="">-Select-</option>
+					  <option value="name">Name</option>
+					  <option value="gender">Gender</option>
+					  <option value="dob">DOB</option>
+					  <option value="aadhar">Aadhar Number</option>
+					  <option value="mobile">Mobile Number</option>
+					  <option value="email">Email</option>
+					  <option value="father">Father Name</option>
+					  <option value="mother">Mother Name</option>
+					  <option value="address">Address</option>
+					  <option value="taluk">Taluk</option>
+					  <option value="district">District</option>
+					  <option value="pincode">Pincode</option>
+					  <option value="pancard">Pancard</option>
+					  <option value="driving">Driving License Number</option>
+					  <option value="voterid">Voter ID</option>
+					  <option value="bank">Bank Name</option>
+					  <option value="customername">Customer Name</option>
+					  <option value="account">Bank Account Number</option>
+					  <option value="card">Debit Card Number</option>
+					  <option value="gnumber">G-Pay Number</option>
+					  <option value="occupation1">Father Occupation</option>
+					  <option value="occupation2">Mother Occupation</option>
+					  <option value="income1">Father Income</option>
+					  <option value="income2">Mother Income</option>
+					  <option value="sslc_school">SSLC School</option>
+					  <option value="sslc_mark">SSLC Mark</option>
+					  <option value="sslc_year">SSLC Year</option>
+					  <option value="hsc_school">HSC School</option>
+					  <option value="hsc_mark">HSC Mark</option>
+					  <option value="hsc_year">HSC Year</option>
+					  <option value="ug_college">UG College</option>
+					  <option value="ug_degree">UG Degree</option>
+					  <option value="ug_mark">UG Mark</option>
+					  <option value="ug_year">UG Year</option>
+					  <option value="pg_college">PG College</option>
+					  <option value="pg_degree">PG Degree</option>
+					  <option value="pg_mark">PG Mark</option>
+					  <option value="pg_year">PG Year</option>
+					  <option value="company">Working Company</option>
+					  <option value="clocation">Company Location</option>
+					  <option value="designation">Designation</option>
+					  <option value="exp_period">Working Period</option>
+					  
+					  </select>
+                    </fieldset>
+                  </div>
+				  
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <button type="submit" id="form-submit" class="main-button" onClick="return validate()">Submit</button>
+                    </fieldset>
+                  </div>
+                </div>
+				<span style="color:#FF0000">{{msg}}</span>
+              </div>
+              <div class="col-lg-6">
+                <div class="contact-info">
+                  <img src="../static/assets/images/about-left-image.png" class="img-fluid">
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Sign Up Wallet
+          
+          <br> <a rel="nofollow" href="https://templatemo.com" title="free CSS templates"></a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../static/vendor/jquery/jquery.min.js"></script>
+  <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/assets/js/owl-carousel.js"></script>
+  <script src="../static/assets/js/animation.js"></script>
+  <script src="../static/assets/js/imagesloaded.js"></script>
+  <script src="../static/assets/js/custom.js"></script>
+
+</body>
+</html>

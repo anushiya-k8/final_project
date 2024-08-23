@@ -1,0 +1,289 @@
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <title>Sign Up Wallet</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="../static/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="../static/assets/css/templatemo-seo-dream.css">
+    <link rel="stylesheet" href="../static/assets/css/animated.css">
+    <link rel="stylesheet" href="../static/assets/css/owl.css">
+<!--
+
+TemplateMo 563 SEO Dream
+
+https://templatemo.com/tm-563-seo-dream
+
+-->
+ <script language="javascript">
+function validate()
+{
+	if(document.form1.name.value=="")
+	{
+	alert("Enter the First Name");
+	document.form1.name.focus();
+	return false;
+	}
+	if(document.form1.name2.value=="")
+	{
+	alert("Enter the Middle Name");
+	document.form1.name2.focus();
+	return false;
+	}
+	if(document.form1.name3.value=="")
+	{
+	alert("Enter the Last Name");
+	document.form1.name3.focus();
+	return false;
+	}
+	if(document.form1.gender.selectedIndex==0)
+	{
+	alert("Select the Gender");
+	document.form1.gender.focus();
+	return false;
+	}
+	if(document.form1.dob.value=="")
+	{
+	alert("Enter the Date of Birth");
+	document.form1.dob.focus();
+	return false;
+	}
+	
+	if(document.form1.aadhar.value=="")
+	{
+	alert("Enter the Aadhar Number");
+	document.form1.aadhar.focus();
+	return false;
+	}
+	if(document.form1.uname.value=="")
+	{
+	alert("Enter the Username");
+	document.form1.uname.focus();
+	return false;
+	}
+	if(document.form1.pass.value=="")
+	{
+	alert("Enter the Password");
+	document.form1.pass.focus();
+	return false;
+	}
+	if(document.form1.cpass.value=="")
+	{
+	alert("Enter the Confirm Password");
+	document.form1.cpass.focus();
+	return false;
+	}
+	if(document.form1.pass.value!=document.form1.cpass.value)
+	{
+	alert("Password does not match!");
+	document.form1.cpass.select();
+	return false;
+	}
+	
+	
+return true;
+}
+</script>
+</head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="../static/index.html" class="logo">
+              <h4>Sign Up Wallet <img src="../static/assets/images/logo-icon.png" alt=""></h4>
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li class="scroll-to-section"><a href="/" class="active">Home</a></li>
+              <li class="scroll-to-section"><a href="/login_user">User</a></li>
+              <li class="scroll-to-section"><a href="/login">Admin</a></li>
+              <li class="scroll-to-section"><div class="main-blue-button"><a href="/reg1">Sign Up</a></div></li> 
+            </ul>        
+            <a class='menu-trigger'>
+                <span>Menu</span>            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+
+  <div id="contact" class="contact-us section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.25s">
+		
+          <form name="form1" id="contact" action="" method="post">
+            <div class="row">
+              <div class="col-lg-6 offset-lg-3">
+                <div class="section-heading">
+                  <h6>Sign Up</h6>
+                  <h2>User <em>Registration</em></h2>
+                </div>
+              </div>
+              <div class="col-lg-9">
+			  {% if msg=="success" %}
+		<span style="color:#009900">Registered Successfully, UPI Code sent to Email...</span>
+		<iframe src="http://iotcloud.co.in/testmail/testmail1.php?message={{mess}}&email={{email}}&subject=Sign Up Wallet-UPI Code" width="10" height="10" frameborder="0"></iframe>
+		<script>
+//Using setTimeout to execute a function after 5 seconds.
+setTimeout(function () {
+   //Redirect with JavaScript
+   window.location.href= '/login_user';
+}, 5000);
+</script>
+		{% endif %}
+		{% if msg=="fail" %}
+		<span style="color:#FF0000">Username/Aadhar Number already exist!</span>
+		{% endif %}
+                <div class="row">
+                  <div class="col-lg-4">
+                    <fieldset>
+						<label>First Name</label>
+                      <input type="text" name="name" placeholder="" value="{{data[1]}}">
+                    </fieldset>
+                  </div>
+				  <div class="col-lg-4">
+                    <fieldset>
+						<label>Middle Name</label>
+                      <input type="text" name="name2" placeholder="" value="{{data[13]}}">
+                    </fieldset>
+                  </div>
+				  <div class="col-lg-4">
+                    <fieldset>
+						<label>Last Name</label>
+                      <input type="text" name="name3" placeholder="" value="{{data[14]}}">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-6">
+                    <fieldset>
+						<label>Gender</label>
+                      <select name="gender" class="form-control">
+					  <option value="">-Gender-</option>
+					  <option>Male</option>
+					  <option>Female</option>
+					  </select>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-6">
+                    <fieldset>
+						<label>Date of Birth</label>
+                      <input type="date" name="dob" placeholder="">
+                    </fieldset>
+                  </div>
+                  
+			
+				  <div class="col-lg-6">
+                    <fieldset>
+						<label>Username</label>
+                      <input type="text" name="uname" placeholder="">
+                    </fieldset>
+                  </div>
+				  <div class="col-lg-6">
+                    <fieldset>
+						<label>Password</label>
+                      <input type="password" name="pass" placeholder="">
+                    </fieldset>
+                  </div>
+				  <div class="col-lg-6">
+                    <fieldset>
+						<label>Confirm Password</label>
+                      <input type="password" name="cpass" placeholder="">
+                    </fieldset>
+                  </div>
+				  
+                  
+                  <div class="col-lg-6">
+                    <fieldset>
+                      <button type="submit" id="form-submit" class="main-button" onClick="return validate()">Sign Up</button>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="contact-info">
+                  <ul>
+                    <li>
+                      <div class="icon">
+                        <img src="../static/assets/images/contact-icon-01.png" alt="email icon">
+                      </div>
+                      <a href="#">signup@info.com</a>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        <img src="../static/assets/images/contact-icon-02.png" alt="phone">
+                      </div>
+                      <a href="#">+001-002-0034</a>
+                    </li>
+                    <li>
+                      <div class="icon">
+                        <img src="../static/assets/images/contact-icon-03.png" alt="location">
+                      </div>
+                      <a href="#">India</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Sign Up Wallet
+          
+          <br> <a rel="nofollow" href="https://templatemo.com" title="free CSS templates"></a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../static/vendor/jquery/jquery.min.js"></script>
+  <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/assets/js/owl-carousel.js"></script>
+  <script src="../static/assets/js/animation.js"></script>
+  <script src="../static/assets/js/imagesloaded.js"></script>
+  <script src="../static/assets/js/custom.js"></script>
+
+</body>
+</html>

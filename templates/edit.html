@@ -1,0 +1,436 @@
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <title>Sign Up Wallet</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="../static/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="../static/assets/css/templatemo-seo-dream.css">
+    <link rel="stylesheet" href="../static/assets/css/animated.css">
+    <link rel="stylesheet" href="../static/assets/css/owl.css">
+<!--
+
+TemplateMo 563 SEO Dream
+
+https://templatemo.com/tm-563-seo-dream
+
+-->
+ <script language="javascript">
+function validate()
+{
+	
+	if(document.form1.father.value=="")
+	{
+	alert("Enter the Father Name");
+	document.form1.father.focus();
+	return false;
+	}
+	if(document.form1.mother.value=="")
+	{
+	alert("Enter the Mother Name");
+	document.form1.father.focus();
+	return false;
+	}
+	if(document.form1.address.value=="")
+	{
+	alert("Enter the Address");
+	document.form1.address.focus();
+	return false;
+	}
+	if(document.form1.district.value=="")
+	{
+	alert("Enter the District");
+	document.form1.district.focus();
+	return false;
+	}
+	if(document.form1.pincode.value=="")
+	{
+	alert("Enter the Pincode");
+	document.form1.pincode.focus();
+	return false;
+	}
+	if(isNaN(document.form1.pincode.value))
+	{
+	alert("Invalid Pincode!");
+	document.form1.pincode.focus();
+	return false;
+	}
+	if(document.form1.pincode.value.length!=6)
+	{
+	alert("Pincode must enter 6 digits");
+	document.form1.pincode.focus();
+	return false;
+	}
+	if(document.form1.bank.value=="")
+	{
+	alert("Enter the Bank");
+	document.form1.bank.focus();
+	return false;
+	}
+	if(document.form1.customername.value=="")
+	{
+	alert("Enter the Customer Name");
+	document.form1.customername.focus();
+	return false;
+	}
+	
+	if(document.form1.account.value=="")
+	{
+	alert("Enter the Account Number");
+	document.form1.account.focus();
+	return false;
+	}
+	if(isNaN(document.form1.account.value))
+	{
+	alert("Invalid Account Number!");
+	document.form1.account.focus();
+	return false;
+	}
+	if(document.form1.account.value.length!=10)
+	{
+	alert("Account Number must enter 10 digits");
+	document.form1.account.focus();
+	return false;
+	}
+	
+	if(document.form1.sslc_mark.value=="")
+	{
+	alert("Enter the SSLC Mark");
+	document.form1.sslc_mark.focus();
+	return false;
+	}
+	if(document.form1.hsc_mark.value=="")
+	{
+	alert("Enter the HSC Mark");
+	document.form1.hsc_mark.focus();
+	return false;
+	}
+	if(document.form1.ug_mark.value=="")
+	{
+	alert("Enter the UG Mark");
+	document.form1.ug_mark.focus();
+	return false;
+	}
+	
+	
+return true;
+}
+</script>
+</head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="../static/index.html" class="logo">
+              <h4>Sign Up Wallet <img src="../static/assets/images/logo-icon.png" alt=""></h4>
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+             <li class="scroll-to-section"><a href="/userhome" class="active">Home</a></li>
+              <li class="scroll-to-section"><a href="/edit">Personal Data</a></li>
+			  <li class="scroll-to-section"><a href="/history">Register History</a></li>
+			  <li class="scroll-to-section"><a href="/view_block">Verify Integrity</a></li>
+             <li class="scroll-to-section"><a href="/logout">Logout</a></li>
+            </ul>        
+            <a class='menu-trigger'>
+                <span>Menu</span>            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+
+  <div id="contact" class="contact-us section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.25s">
+		
+          <form name="form1" id="contact" action="" method="post">
+            <div class="row">
+              <div class="col-lg-6 offset-lg-3">
+                <div class="section-heading">
+                   <h2>User <em>: {{name}}</em></h2>
+				  <h6>UPI Code: {{ucode}}</h6>
+                </div>
+              </div>
+              <div class="col-lg-12">
+			  <h5 align="left">Personal Information</h5>
+			  {% if msg=="success" %}
+			  <span style="color:#00CC00">Updated Success..</span>
+			  
+<script>
+//Using setTimeout to execute a function after 5 seconds.
+setTimeout(function () {
+   //Redirect with JavaScript
+   window.location.href= 'edit';
+}, 5000);
+</script>
+			  {% endif %}
+			  <p>&nbsp;</p>
+                <div class="row">
+					<div class="col-lg-3">
+                    <fieldset>
+					<label>Father Name</label>
+                      <input type="text" name="father" placeholder="" value="{{data[0]}}">
+                    </fieldset>
+                  </div>
+				  <div class="col-lg-3">
+                    <fieldset>
+					<label>Mother Name</label>
+                      <input type="text" name="mother" placeholder="" value="{{data[1]}}">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-3">
+                    <fieldset>
+					<label>Address</label>
+                      <input type="text" name="address" placeholder="" value="{{data[2]}}">
+                    </fieldset>
+                  </div>
+				  <div class="col-lg-3">
+                    <fieldset>
+						<label>Taluk</label>
+                      <input type="text" name="taluk" placeholder="" value="{{data[3]}}">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-3">
+                    <fieldset>
+						<label>District</label>
+                      <input type="text" name="district" placeholder="" value="{{data[4]}}">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-3">
+                    <fieldset>
+						<label>Pincode</label>
+                     <input type="text" name="pincode" placeholder="" value="{{data[5]}}">
+                    </fieldset>
+                  </div>
+                  
+				
+				
+				  <div class="col-lg-3">
+                    <fieldset>
+						<label>Bank Name</label>
+                      <input type="text" name="bank" placeholder="" value="{{data[9]}}">
+                    </fieldset>
+                  </div>
+				  <div class="col-lg-3">
+                    <fieldset>
+						<label>Bank Account Holder Name</label>
+                      <input type="text" name="customername" placeholder="" value="{{data[10]}}">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-3">
+                    <fieldset>
+						<label>Bank Account Number</label>
+                      <input type="text" name="account" placeholder="" maxlength="10" value="{{data[11]}}">
+                    </fieldset>
+                  </div>
+				  <div class="col-lg-3">
+                    <fieldset>
+						<label>Debit Card Number</label>
+                      <input type="text" name="card" placeholder="" maxlength="16" value="{{data[12]}}">
+                    </fieldset>
+                  </div>
+				  <div class="col-lg-3">
+                    <fieldset>
+						<label>G-Pay Number</label>
+                      <input type="text" name="gnumber" placeholder="" maxlength="10" value="{{data[13]}}">
+                    </fieldset>
+                  </div>
+				  
+				  
+				  <h5 align="left">Educational Information</h5>
+				  <p>&nbsp;</p>
+				  <div class="col-lg-3">
+                    <fieldset>
+					<label>SSLC School Name</label>
+                      <input type="text" name="sslc_school" placeholder="" value="{{data[18]}}">
+                    </fieldset>
+                  </div>
+				  <div class="col-lg-3">
+                    <fieldset>
+					<label>SSLC Mark %</label>
+                      <input type="text" name="sslc_mark" placeholder="" maxlength="5" value="{{data[19]}}">
+                    </fieldset>
+                  </div>
+				  
+				  <div class="col-lg-3">
+                    <fieldset>
+					<label>SSLC Passout Year</label>
+                      <input type="text" name="sslc_year" placeholder="" value="{{data[20]}}">
+                    </fieldset>
+                  </div>
+				  
+				  <div class="col-lg-3">
+                    <fieldset>
+					<label>HSc School Name</label>
+                      <input type="text" name="hsc_school" placeholder="" value="{{data[21]}}">
+                    </fieldset>
+                  </div>
+				  <div class="col-lg-3">
+                    <fieldset>
+					<label>HSC Mark %</label>
+                      <input type="text" name="hsc_mark" placeholder="" maxlength="5" value="{{data[22]}}">
+                    </fieldset>
+                  </div>
+				  
+				  <div class="col-lg-3">
+                    <fieldset>
+					<label>HSC Passout Year</label>
+                      <input type="text" name="hsc_year" placeholder="" value="{{data[23]}}">
+                    </fieldset>
+                  </div>
+				  
+				  <div class="col-lg-3">
+                    <fieldset>
+					<label>UG College</label>
+                      <input type="text" name="ug_college" placeholder="" value="{{data[24]}}">
+                    </fieldset>
+                  </div>
+				  <div class="col-lg-3">
+                    <fieldset>
+					<label>UG Degree</label>
+                      <input type="text" name="ug_degree" placeholder="" value="{{data[25]}}">
+                    </fieldset>
+                  </div>
+				   <div class="col-lg-3">
+                    <fieldset>
+					<label>UG Mark %</label>
+                      <input type="text" name="ug_mark" placeholder="" maxlength="5" value="{{data[26]}}">
+                    </fieldset>
+                  </div>
+				  <div class="col-lg-3">
+                    <fieldset>
+					<label>UG Passout Year</label>
+                      <input type="text" name="ug_year" placeholder="" value="{{data[27]}}">
+                    </fieldset>
+                  </div>
+				  
+				  <div class="col-lg-3">
+                    <fieldset>
+					<label>PG College</label>
+                      <input type="text" name="pg_college" placeholder="" value="{{data[28]}}">
+                    </fieldset>
+                  </div>
+				  <div class="col-lg-3">
+                    <fieldset>
+					<label>PG Degree</label>
+                      <input type="text" name="pg_degree" placeholder="" value="{{data[29]}}">
+                    </fieldset>
+                  </div>
+				   <div class="col-lg-3">
+                    <fieldset>
+					<label>PG Mark %</label>
+                      <input type="text" name="pg_mark" placeholder="" maxlength="5" value="{{data[30]}}">
+                    </fieldset>
+                  </div>
+				  <div class="col-lg-3">
+                    <fieldset>
+					<label>PG Passout Year</label>
+                      <input type="text" name="pg_year" placeholder="" value="{{data[31]}}">
+                    </fieldset>
+                  </div>
+				  
+				    <h5 align="left">Working Information</h5>
+				  <p>&nbsp;</p>
+				  
+				  <div class="col-lg-3">
+                    <fieldset>
+					<label>Company Name</label>
+                      <input type="text" name="company" placeholder="" value="{{data[32]}}">
+                    </fieldset>
+                  </div>
+				   <div class="col-lg-3">
+                    <fieldset>
+					<label>Company Location</label>
+                      <input type="text" name="clocation" placeholder="" value="{{data[33]}}">
+                    </fieldset>
+                  </div>
+				  <div class="col-lg-3">
+                    <fieldset>
+					<label>Designation</label>
+                      <input type="text" name="designation" placeholder="" value="{{data[34]}}">
+                    </fieldset>
+                  </div>
+				  <div class="col-lg-3">
+                    <fieldset>
+					<label>Experience Year/Month</label>
+                      <input type="text" name="exp_period" placeholder="" value="{{data[35]}}">
+                    </fieldset>
+                  </div>
+				  
+				  
+				  
+				  
+                  <div class="col-lg-3">
+                    <fieldset>
+                      <button type="submit" id="form-submit" class="main-button" onClick="return validate()">Update Wallet Chain</button>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+             
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Sign Up Wallet
+          
+          <br> <a rel="nofollow" href="https://templatemo.com" title="free CSS templates"></a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../static/vendor/jquery/jquery.min.js"></script>
+  <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/assets/js/owl-carousel.js"></script>
+  <script src="../static/assets/js/animation.js"></script>
+  <script src="../static/assets/js/imagesloaded.js"></script>
+  <script src="../static/assets/js/custom.js"></script>
+
+</body>
+</html>
