@@ -1,0 +1,1 @@
+name,gender,dob,aadhar,mobile,email,father,mother,address,taluk,district,pincode,pancard,driving,voterid,bank,customername,account,card,g
